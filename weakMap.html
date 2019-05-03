@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>weakMap</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let jelly = {name: 'jelly'};
+		let miffy = {name: 'miffy'};
+
+		const strong = new Map();
+		const weak = new WeakMap();
+
+		strong.set(jelly, 'aaaaaaaa');
+		weak.set(miffy, 'bbbbbbbbb');
+	</script>
+	
+</body>
+</html>

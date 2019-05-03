@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>extending array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class MyArray extends Array {
+			constructor() {
+				super();
+			}
+		}
+	
+		const colors = new MyArray();
+		colors[0] = 'red';
+		console.log(colors.length);
+		colors.length = 0;
+		console.log(colors[0]);
+	</script>
+
+	<script type="text/javascript">
+		class movieCollection extends Array {
+			constructor(name, ...items) {
+				super(...items);
+				this.name = name;
+			}
+
+			add(movie) {
+				this.push(movie);
+			}
+
+			topRated(limit = 10) {
+				return this.sort((a,b) => (a.scores > b.scores) ? -1 : 1).slice(0, limit);
+			}
+		}
+
+
+
+		const movies = new movieCollection('faviorite movies',
+				{ name: 'a', scores: 8.7},
+				{ name: 'b', scores: 9.6},
+				{ name: 'c', scores: 9.4},
+				{ name: 'd', scores: 9.0},
+			);
+		movies.push({name:'e', scores: 4.5});
+		console.table(movies.topRated());
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrow Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const numbers = [5, 6, 13, 0, 1, 18,23];
+		const double = numbers.map(function(number) {
+			return number * 2;
+		}) ;
+
+		const double2 = numbers.map((number) => number * 2);
+
+		const greet = name => {alert(`hello ${name}`)};
+		greet('jelly');
+		console.log(double2);
+	</script>
+	匿名函数
+	删掉function 关键字，加上一个胖箭头， 没有参数加（）， 一个参数可选择， 多个参数逗号分隔！！
+
+	<script type="text/javascript">
+		const Jelly = {
+			name: 'Jelly',
+			hobbies: ['coding', 'sleeping'],
+			printHobbies: function() {
+				this.hobbies.map(hobby => {
+					console.log(`${this.name} loves ${hobby}`);
+				})
+			}
+		}
+		Jelly.printHobbies();
+	</script>
+</body>
+</html>

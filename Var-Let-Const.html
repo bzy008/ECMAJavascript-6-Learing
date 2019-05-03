@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Var-Let-Const</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var price = 100;//var可以重新赋值，可能会覆盖之前的值，let不会
+		
+
+		let count = 10;
+		if (count > 5) {
+			let discount = price * 0.6;
+			console.log(`The discount is ${discount}`);
+		}
+		let age = 30;
+		const id = 'abc123';
+	</script>
+</body>
+</html>

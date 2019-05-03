@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>spread operator intro</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let youngers = ['aa', 'bb', 'cc'];
+		let olders = ['dd', 'ee', 'ff'];
+		let members = [...youngers, 'mary', ...olders];
+		console.log(members);
+	</script>
+
+	<script type="text/javascript">
+		const favorites = {
+			color: ['yellow', 'blue'],
+			fruits: ['banana', 'mongo']
+		}
+		const shoppingList = ['milk', 'sweets', ...favorites.fruits];
+		console.log(shoppingList);
+	</script>
+
+	<script type="text/javascript">
+		let fruit = ['banana', 'mongo'];
+		let newFruit = ['apple', 'pear'];
+		fruit.push(...newFruit);
+		console.log(fruit);
+	</script>
+
+	<script type="text/javascript">
+		let dateFields = [2019, 5, 2];
+		let date = new Date(...dateFields);
+		console.log(date);
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Destructuring Obj</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const Tom = {
+			name: 'Tom Jones',
+			age: 25,
+			family: {
+				mother: 'a',
+				father: 'b',
+				brother: 'c'
+			},
+		}
+
+		const { name, age } = Tom;
+		console.log(name);
+		console.log(age);
+
+
+		const{ father, mother, brother, sister = 'no' } = Tom.family;
+		console.log(father);
+		console.log(mother);
+	</script>
+</body>
+</html>

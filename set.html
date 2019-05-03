@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>set</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const colors = new Set();
+		colors.add('red');
+		colors.add('green');
+		colors.add('blue');
+
+		for (let color of colors) {
+			console.log(color);
+		}
+
+		const numbers = [1,2,3,4,5,5,5,5];
+		const numbersSet = new Set(numbers);
+		const uniqueNumbers = [...numbersSet];
+	</script>
+	.delete
+	.has
+	.clear
+</body>
+</html>

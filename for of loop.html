@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for of loop</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let fruits = ['a', 'b', 'c', 'd'];
+		for (let fruit of fruits) {
+			console.log(fruit);
+		}
+
+
+		function sum() {
+			let total = 0;
+			for (let num of arguments) {
+				total = total + num;
+			}
+			console.log(total);
+			return total;
+		}
+
+		sum(1,2,3,4,5);
+
+
+		let name = 'asdfggg';
+		for (let char of name) {
+			console.log(char);
+		}
+	</script>
+</body>
+</html>

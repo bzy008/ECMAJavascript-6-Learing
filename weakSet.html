@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>weakSet</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let jelly = { name: 'jelly', age: 20};
+		let mary = { name: 'mary', age: 22};
+		const weakPeople = new WeakSet([jelly, mary]);
+
+		console.log(weakPeople);
+		mary = null;
+		console.log(weakPeople);
+	</script>
+
+	不能循环，没有iterator
+	自己清除 防止内存泄漏
+</body>
+</html>

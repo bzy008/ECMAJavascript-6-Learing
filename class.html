@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>classes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Animal {
+			constructor(name) {
+				this.name = name;
+				this.belly = [];
+			}
+
+			eat(food) {
+				this.belly.push(food);
+			}
+
+			speak() {
+				console.log(`hi, i am ${this.name}`);
+			}
+		}
+
+		class Dog extends Animal {
+			constructor(name, age) {
+				super(name);
+			
+				this.age = age;
+			}
+			bark() {
+				console.log(`bark!`);
+			}
+
+			speak() {
+				console.log(`bark! i am ${this.name}`);
+			}
+		}
+
+		const lucky = new Dog('lucky', 2);
+	</script>
+</body>
+</html>
